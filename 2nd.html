@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="2nd.css">
+   
+</head>
+<head>
+    <style>
+        .coup {
+            width: 650px; /* Adjust the size */
+            height: auto; /* Maintain aspect ratio */
+            margin: 20px; /* Optional: Add spacing */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <img class="logo" src="https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/0a865b57808369.59e4ddb49c754.jpg" alt="Logo">
+        </div>
+        <div class="navbar-right">
+            <a class="element" href="#">Home</a>
+            <a class="element" href="#">Rides</a>
+            <a class="element" href="#">Search</a>
+            <a class="element" href="#">History</a>
+        </div>
+    </div>
+    
+    <div class="main">
+        <div class="main-content">
+            <div class="main-left">
+                <img class="main-icon" src="https://img.freepik.com/premium-vector/car-silhouette-vehicle-icon-view-from-front-car-silhouette-white-background_735449-88.jpg" alt="Car Icon">
+                <img class="main-icon2" src="https://static.vecteezy.com/system/resources/previews/000/649/595/original/wifi-icon-symbol-sign-vector.jpg" alt="WiFi Icon">
+                <h1>Request a Drive Now</h1>
+                <div class="card">
+                    <input type="text" id="pickup" placeholder="Enter the pickup location">
+                    <input type="text" id="destination" placeholder="Enter the destination">
+                </div>
+                <div class="btn">
+                    <button class="fr" id="request">Request Now</button>
+                    <button class="sec">Schedule for Later</button>
+                </div>
+            </div>
+           
+        </div>
+        <div class="main-right">
+            <img class="coup" src=https://d3k81ch9hvuctc.cloudfront.net/company/XtGHJ6/images/43ecba5e-e954-4c88-9a67-75d700ed2c74.jpeg>
+        </div>
+    </div>
+    
+    
+    
+    <footer class="footer">
+        <div class="list">
+            <h2>Company</h2>
+            <p>About us</p>
+            <p>Our offerings</p>
+            <p>Newsroom</p>
+            <p>Investors</p>
+            <p>Blog</p>
+        </div>
+        <div class="list">
+            <h2>Products</h2>
+            <p>Ride</p>
+            <p>Drive</p>
+            <p>Deliver</p>
+            <p>Eat</p>
+            <p>Uber for Business</p>
+        </div>
+        <div class="list">
+            <h2>Global Citizenship</h2>
+            <p>Safety</p>
+            <p>Diversity and Inclusion</p>
+        </div>
+        <div class="list">
+            <h2>Travel</h2>
+            <p>Airports</p>
+            <p>Cities</p>
+        </div>
+    </footer>
+
+    <script>
+        const request = document.getElementById("request");
+        const schedule = document.querySelector(".sec");
+        const pickup = document.getElementById("pickup");
+        const destination = document.getElementById("destination");
+    
+ 
+        const validateInputs = () => {
+            if (!pickup.value.trim() || !destination.value.trim()) {
+                alert("Please enter both pickup and destination locations.");
+                return false;
+            }
+            return true;
+        };
+    
+
+        request.addEventListener("click", () => {
+            if (validateInputs()) {
+                alert("Drive requested successfully!");
+            }
+        });
+    
+      
+        schedule.addEventListener("click", () => {
+            if (validateInputs()) {
+                alert("Your drive has been scheduled successfully!");
+            }
+        });
+    </script>
+    
+</body>
+</html>
